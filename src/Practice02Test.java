@@ -10,7 +10,7 @@ public class Practice02Test {
     public boolean createAndPlaceQueens(int size) {
     	NQueens nq = new NQueens(size);
     	try {
-    		return nq.placeNQueens();
+    		return nq.placeNQueens(0);
     	} catch (Exception e) {
     		return false;
     	}
@@ -29,7 +29,7 @@ public class Practice02Test {
 
     		// ... but should throw an error for board sizes smaller than 1
     		try {
-    			nq.placeNQueens();
+    			nq.placeNQueens(0);
     			System.out.println("[    ] NQueens class should check parameters are valid");
     		} catch (Exception e) {
     			grade += 5;
